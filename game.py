@@ -1,4 +1,5 @@
 from goblin import Goblin
+from hero import Hero
 
 
 ARENA_NAME = "The Iron Claw"
@@ -19,6 +20,17 @@ def main():
     print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
 
     print("But no hero has answered the call... yet.")
+
+    hero = Hero("Bob The 8th")
+    print(f"{hero.name} enters the arena with {hero.health} health.")
+
+    print(f"{hero.name} attackes {goblin.name}")
+
+    goblin.take_damage(hero.attack())
+    if goblin.is_alive:
+        hero.take_damage(goblin.attack())
+
+
 
 
 if __name__ == "__main__":
