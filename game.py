@@ -1,5 +1,6 @@
 from goblin import Goblin
 from hero import Hero
+from boss import Boss
 
 
 ARENA_NAME = "The Iron Claw"
@@ -29,7 +30,6 @@ def main():
     goblin.take_damage(hero.attack())
     if goblin.is_alive:
         hero.take_damage(goblin.attack())
-
 
 
 
